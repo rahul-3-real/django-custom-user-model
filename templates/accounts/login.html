@@ -1,0 +1,20 @@
+{% extends '../base.html' %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Alert -->
+{% if err_msg %}
+<div class="alert alert-danger" role="alert">{{ err_msg }}</div>
+{% endif %}
+<!-- Alert -->
+
+<h4 class="display-4 mb-5">Producer Login</h4>
+<form action="" method="POST">
+  {% csrf_token %}
+  <!-- Fields -->
+  {{ form.as_p }}
+  <button class="btn btn-primary">Login</button>
+</form>
+
+{% endblock content %}
